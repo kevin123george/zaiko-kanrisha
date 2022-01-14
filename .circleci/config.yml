@@ -28,7 +28,7 @@ jobs:
 #          command: mvn test
       - run:
           name: deploy
-          command: scp -i "~/Downloads/aws-demo.pem" /home/circleci/project/target/zaiko-kanrisha-0.0.1-SNAPSHOT ubuntu@ec2-52-13-55-116.us-west-2.compute.amazonaws.com:/home/ubuntu
+          command: scp -i "/home/circleci/aws-demo.pem" /home/circleci/project/target/zaiko-kanrisha-0.0.1-SNAPSHOT ubuntu@ec2-52-13-55-116.us-west-2.compute.amazonaws.com:/home/ubuntu
 
 
 # Invoke jobs via workflows
