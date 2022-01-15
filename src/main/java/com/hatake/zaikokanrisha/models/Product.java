@@ -19,19 +19,13 @@ import java.util.UUID;
 		uniqueConstraints = {
 				@UniqueConstraint(columnNames = "productId")
 		})
-public class Product {
+public class Product extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int productId;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdDateTime;
-
 	private String createdUser;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date lastModifiedDateTime;
 
 	private String lastModifiedUser;
 
@@ -70,28 +64,12 @@ public class Product {
 		this.productId = productId;
 	}
 
-	public Date getCreatedDateTime() {
-		return this.createdDateTime;
-	}
-
-	public void setCreatedDateTime(Date createdDateTime) {
-		this.createdDateTime = createdDateTime;
-	}
-
 	public String getCreatedUser() {
 		return this.createdUser;
 	}
 
 	public void setCreatedUser(String createdUser) {
 		this.createdUser = createdUser;
-	}
-
-	public Date getLastModifiedDateTime() {
-		return this.lastModifiedDateTime;
-	}
-
-	public void setLastModifiedDateTime(Date lastModifiedDateTime) {
-		this.lastModifiedDateTime = lastModifiedDateTime;
 	}
 
 	public String getLastModifiedUser() {

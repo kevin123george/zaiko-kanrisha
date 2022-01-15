@@ -20,19 +20,13 @@ import java.util.UUID;
 		uniqueConstraints = {
 				@UniqueConstraint(columnNames = "supplierId")
 		})
-public class Supplier implements Serializable {
+public class Supplier extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int supplierId;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdDateTime;
-
 	private String createdUser;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date lastModifiedDateTime;
 
 	private String lastModifiedUser;
 
@@ -59,14 +53,6 @@ public class Supplier implements Serializable {
 		this.supplierId = supplierId;
 	}
 
-	public Date getCreatedDateTime() {
-		return this.createdDateTime;
-	}
-
-	public void setCreatedDateTime(Date createdDateTime) {
-		this.createdDateTime = createdDateTime;
-	}
-
 	public String getCreatedUser() {
 		return this.createdUser;
 	}
@@ -75,13 +61,6 @@ public class Supplier implements Serializable {
 		this.createdUser = createdUser;
 	}
 
-	public Date getLastModifiedDateTime() {
-		return this.lastModifiedDateTime;
-	}
-
-	public void setLastModifiedDateTime(Date lastModifiedDateTime) {
-		this.lastModifiedDateTime = lastModifiedDateTime;
-	}
 
 	public String getLastModifiedUser() {
 		return this.lastModifiedUser;

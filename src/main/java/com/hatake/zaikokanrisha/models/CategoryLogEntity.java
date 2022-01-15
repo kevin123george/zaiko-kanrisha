@@ -14,20 +14,14 @@ import java.util.UUID;
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "categoryId")
         })
-public class CategoryLogEntity  {
+public class CategoryLogEntity  extends DateAudit{
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int categoryId;
 
     private String categoryName;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDateTime;
-
     private String createdUser;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDateTime;
 
     private String lastModifiedUser;
 
@@ -36,12 +30,10 @@ public class CategoryLogEntity  {
     public CategoryLogEntity() {
     }
 
-    public CategoryLogEntity(String categoryName, Date createdDateTime, String createdUser,
-                             Date lastModifiedDateTime, String lastModifiedUser, BigDecimal version) {
+    public CategoryLogEntity(String categoryName, String createdUser,
+                             Date lastModifiedDateTime, BigDecimal version) {
         this.categoryName = categoryName;
-        this.createdDateTime = createdDateTime;
         this.createdUser = createdUser;
-        this.lastModifiedDateTime = lastModifiedDateTime;
         this.lastModifiedUser = lastModifiedUser;
         this.version = version;
     }
@@ -62,28 +54,12 @@ public class CategoryLogEntity  {
         this.categoryName = categoryName;
     }
 
-    public Date getCreatedDateTime() {
-        return this.createdDateTime;
-    }
-
-    public void setCreatedDateTime(Date createdDateTime) {
-        this.createdDateTime = createdDateTime;
-    }
-
     public String getCreatedUser() {
         return this.createdUser;
     }
 
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
-    }
-
-    public Date getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
-    }
-
-    public void setLastModifiedDateTime(Date lastModifiedDateTime) {
-        this.lastModifiedDateTime = lastModifiedDateTime;
     }
 
     public String getLastModifiedUser() {

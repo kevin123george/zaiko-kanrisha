@@ -18,7 +18,7 @@ import javax.persistence.*;
 		uniqueConstraints = {
 				@UniqueConstraint(columnNames = "refId")
 		})
-public class ProductPricing {
+public class ProductPricing extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

@@ -19,7 +19,7 @@ import java.util.UUID;
 		uniqueConstraints = {
 				@UniqueConstraint(columnNames = "refId")
 		})
-public class Stock {
+public class Stock extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -27,16 +27,10 @@ public class Stock {
 
 	private String branchId;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdDateTime;
-
 	private String createdUser;
 
 	@Temporal(TemporalType.DATE)
 	private Date dateStock;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date lastModifiedDateTime;
 
 	private String lastModifiedUser;
 
@@ -80,14 +74,6 @@ public class Stock {
 		this.branchId = branchId;
 	}
 
-	public Date getCreatedDateTime() {
-		return this.createdDateTime;
-	}
-
-	public void setCreatedDateTime(Date createdDateTime) {
-		this.createdDateTime = createdDateTime;
-	}
-
 	public String getCreatedUser() {
 		return this.createdUser;
 	}
@@ -102,14 +88,6 @@ public class Stock {
 
 	public void setDateStock(Date dateStock) {
 		this.dateStock = dateStock;
-	}
-
-	public Date getLastModifiedDateTime() {
-		return this.lastModifiedDateTime;
-	}
-
-	public void setLastModifiedDateTime(Date lastModifiedDateTime) {
-		this.lastModifiedDateTime = lastModifiedDateTime;
 	}
 
 	public String getLastModifiedUser() {

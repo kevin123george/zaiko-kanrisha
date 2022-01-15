@@ -2,13 +2,10 @@ package com.hatake.zaikokanrisha.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-
 import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 @Entity
@@ -16,7 +13,7 @@ import java.util.UUID;
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "categoryId")
         })
-public class Category {
+public class Category extends DateAudit{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,13 +21,7 @@ public class Category {
 
     private String categoryName;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDateTime;
-
     private String createdUser;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDateTime;
 
     private String lastModifiedUser;
 
@@ -56,28 +47,12 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public Date getCreatedDateTime() {
-        return this.createdDateTime;
-    }
-
-    public void setCreatedDateTime(Date createdDateTime) {
-        this.createdDateTime = createdDateTime;
-    }
-
     public String getCreatedUser() {
         return this.createdUser;
     }
 
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
-    }
-
-    public Date getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
-    }
-
-    public void setLastModifiedDateTime(Date lastModifiedDateTime) {
-        this.lastModifiedDateTime = lastModifiedDateTime;
     }
 
     public String getLastModifiedUser() {
