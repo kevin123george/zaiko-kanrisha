@@ -2,6 +2,8 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+orbs:
+  aws-cli: circleci/aws-cli@2.0.3
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -26,11 +28,22 @@ jobs:
 #      - run:
 #          name: Test
 #          command: mvn test
+      # - run:
+      #     name: deploy
+      #     command: scp -i "/home/circleci/aws-demo.pem" /home/circleci/project/target/zaiko-kanrisha-0.0.1-SNAPSHOT ubuntu@ec2-52-13-55-116.us-west-2.compute.amazonaws.com:/home/ubuntu
+
+  example-job:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - aws-cli/setup:
+          aws-access-key-id: AKIA6BATJATTSHOP4OYR 
+          aws-region: us-west-2 
+          aws-secret-access-key: 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
       - run:
           name: deploy
-          command: scp -i "/home/circleci/aws-demo.pem" /home/circleci/project/target/zaiko-kanrisha-0.0.1-SNAPSHOT ubuntu@ec2-52-13-55-116.us-west-2.compute.amazonaws.com:/home/ubuntu
-
-
+          command:  /home/circleci/project/target/zaiko-kanrisha-0.0.1-SNAPSHOT ubuntu@ec2-18-237-0-28.us-west-2.compute.amazonaws.com:/home/ubuntu
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
