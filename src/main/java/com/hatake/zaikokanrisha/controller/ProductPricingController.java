@@ -21,7 +21,7 @@ public class ProductPricingController {
     }
 
     @RequestMapping("/{id}")
-    public Optional<ProductPricing> searchProductPricing(@PathVariable int id) {
+    public Optional<ProductPricing> searchProductPricing(@PathVariable Integer id) {
         return productPricingService.findById(id);
     }
 

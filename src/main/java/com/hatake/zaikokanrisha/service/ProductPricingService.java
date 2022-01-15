@@ -20,7 +20,7 @@ public class ProductPricingService {
     }
 
 
-    public Optional< ProductPricing> findById(int id) {
+    public Optional< ProductPricing> findById(Integer id) {
         return productPricingRepository.findById(id);
     }
 

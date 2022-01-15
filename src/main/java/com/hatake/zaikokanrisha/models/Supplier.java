@@ -24,7 +24,7 @@ public class Supplier extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int supplierId;
+	private Integer supplierId;
 
 	private String createdUser;
 
@@ -45,11 +45,11 @@ public class Supplier extends DateAudit{
 	public Supplier() {
 	}
 
-	public int getSupplierId() {
+	public Integer getSupplierId() {
 		return this.supplierId;
 	}
 
-	public void setSupplierId(int supplierId) {
+	public void setSupplierId(Integer supplierId) {
 		this.supplierId = supplierId;
 	}
 

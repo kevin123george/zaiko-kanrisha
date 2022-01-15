@@ -22,7 +22,7 @@ import java.util.UUID;
 public class Pricing extends DateAudit{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int pricingId;
+	private Integer pricingId;
 
 	private String createdUser;
 
@@ -47,11 +47,11 @@ public class Pricing extends DateAudit{
 	public Pricing() {
 	}
 
-	public int getPricingId() {
+	public Integer getPricingId() {
 		return this.pricingId;
 	}
 
-	public void setPricingId(int pricingId) {
+	public void setPricingId(Integer pricingId) {
 		this.pricingId = pricingId;
 	}
 

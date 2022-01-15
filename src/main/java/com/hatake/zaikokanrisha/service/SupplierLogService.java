@@ -19,7 +19,7 @@ public class SupplierLogService {
     }
 
 
-    public Optional<SupplierLogEntity> findById(int id) {
+    public Optional<SupplierLogEntity> findById(Integer id) {
         return supplierLogRepository.findById(id);
     }
 

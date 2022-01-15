@@ -23,7 +23,7 @@ public class Stock extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int refId;
+	private Integer refId;
 
 	private String branchId;
 
@@ -34,9 +34,9 @@ public class Stock extends DateAudit{
 
 	private String lastModifiedUser;
 
-	private int quantity;
+	private Integer quantity;
 
-	//private int stockId;
+	//private Integer stockId;
 
 	private BigDecimal version;
 
@@ -58,11 +58,11 @@ public class Stock extends DateAudit{
 	public Stock() {
 	}
 
-	public int getRefId() {
+	public Integer getRefId() {
 		return this.refId;
 	}
 
-	public void setRefId(int refId) {
+	public void setRefId(Integer refId) {
 		this.refId = refId;
 	}
 
@@ -98,19 +98,19 @@ public class Stock extends DateAudit{
 		this.lastModifiedUser = lastModifiedUser;
 	}
 
-	public int getQuantity() {
+	public Integer getQuantity() {
 		return this.quantity;
 	}
 
-	public void setQuantity(int quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
 
-	/*public int getStockId() {
+	/*public Integer getStockId() {
 		return this.stockId;
 	}
 
-	public void setStockId(int stockId) {
+	public void setStockId(Integer stockId) {
 		this.stockId = stockId;
 	}*/
 

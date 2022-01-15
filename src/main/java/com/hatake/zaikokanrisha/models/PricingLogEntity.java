@@ -21,7 +21,7 @@ public class PricingLogEntity extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int pricingId;
+	private Integer pricingId;
 
 	private String createdUser;
 	private String lastModifiedUser;
@@ -41,11 +41,11 @@ public class PricingLogEntity extends DateAudit{
 	public PricingLogEntity() {
 	}
 
-	public int getPricingId() {
+	public Integer getPricingId() {
 		return this.pricingId;
 	}
 
-	public void setPricingId(int pricingId) {
+	public void setPricingId(Integer pricingId) {
 		this.pricingId = pricingId;
 	}
 

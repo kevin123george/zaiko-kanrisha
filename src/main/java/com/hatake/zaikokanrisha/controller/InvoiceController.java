@@ -21,7 +21,7 @@
 //    }
 //
 //    @RequestMapping("/{id}")
-//    public Optional<Invoice> searchInvoice(@PathVariable int id) {
+//    public Optional<Invoice> searchInvoice(@PathVariable Integer id) {
 //        return invoiceService.findById(id);
 //    }
 //

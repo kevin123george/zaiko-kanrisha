@@ -34,7 +34,7 @@ public class PricingService {
         return pricingRepository.findAll();
     }
 
-    public Optional<Pricing> find(int id) {
+    public Optional<Pricing> find(Integer id) {
         return pricingRepository.findById(id);
     }
 

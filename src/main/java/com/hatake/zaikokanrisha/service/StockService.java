@@ -17,7 +17,7 @@ public class StockService {
         stockRepository.save(stock);
     }
 
-    public Optional<Stock> findById(int id) {
+    public Optional<Stock> findById(Integer id) {
         return stockRepository.findById(id);
     }
 

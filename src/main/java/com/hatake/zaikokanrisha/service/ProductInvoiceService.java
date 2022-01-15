@@ -19,7 +19,7 @@
 //    }
 //
 //
-//    public Optional<ProductInvoice> findById(int id) {
+//    public Optional<ProductInvoice> findById(Integer id) {
 //        return productInvoiceRepository.findById(id);
 //    }
 //

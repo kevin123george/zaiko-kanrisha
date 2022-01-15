@@ -21,7 +21,7 @@ public class CategoryLogService {
     }
 
 
-    public Optional<CategoryLogEntity> findById(int id) {
+    public Optional<CategoryLogEntity> findById(Integer id) {
         return categoryLogRepository.findById(id);
     }
 

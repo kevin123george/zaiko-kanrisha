@@ -22,7 +22,7 @@ public class PricingLogService {
     }
 
 
-    public Optional<PricingLogEntity> findById(int id) {
+    public Optional<PricingLogEntity> findById(Integer id) {
         return pricingLogRepository.findById(id);
     }
 

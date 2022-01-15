@@ -21,15 +21,15 @@ public class ProductLogEntity extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int productId;
+	private Integer productId;
 
-	private int categoryId;
+	private Integer categoryId;
 
 	private String createdUser;
 
 	private String lastModifiedUser;
 
-	private int pricingId;
+	private Integer pricingId;
 
 	private double productbuyingPrice;
 
@@ -44,19 +44,19 @@ public class ProductLogEntity extends DateAudit{
 	public ProductLogEntity() {
 	}
 
-	public int getProductId() {
+	public Integer getProductId() {
 		return this.productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
-	public int getCategoryId() {
+	public Integer getCategoryId() {
 		return this.categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
 
@@ -76,11 +76,11 @@ public class ProductLogEntity extends DateAudit{
 		this.lastModifiedUser = lastModifiedUser;
 	}
 
-	public int getPricingId() {
+	public Integer getPricingId() {
 		return this.pricingId;
 	}
 
-	public void setPricingId(int pricingId) {
+	public void setPricingId(Integer pricingId) {
 		this.pricingId = pricingId;
 	}
 

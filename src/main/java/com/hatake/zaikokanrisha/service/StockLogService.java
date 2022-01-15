@@ -18,7 +18,7 @@ public class StockLogService {
     }
 
 
-    public Optional<StockLogEntity> findById(int id) {
+    public Optional<StockLogEntity> findById(Integer id) {
         return stockLogRepository.findById(id);
     }
 

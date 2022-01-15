@@ -25,7 +25,7 @@ public class CategoryController {
     }
 
     @RequestMapping("/{id}")
-    public Optional<Category> searchCategory(@PathVariable int id) {
+    public Optional<Category> searchCategory(@PathVariable Integer id) {
         return categoryService.findById(id);
     }
 
@@ -42,7 +42,7 @@ public class CategoryController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE,value ="/{id}")
-    public void deleteCategory(@PathVariable int id) {
+    public void deleteCategory(@PathVariable Integer id) {
         categoryService.deleteCategory(id);
 //        categoryLogService.insert(TheLogConverter.categoryLogConverter(category));
     }

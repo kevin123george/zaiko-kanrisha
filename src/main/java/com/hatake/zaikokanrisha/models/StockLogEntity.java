@@ -21,9 +21,9 @@ import java.util.UUID;
 public class StockLogEntity extends DateAudit{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int refId;
+	private Integer refId;
 
-	private int categoryId;
+	private Integer categoryId;
 
 	private String createdUser;
 
@@ -32,32 +32,32 @@ public class StockLogEntity extends DateAudit{
 
 	private String lastModifiedUser;
 
-	private int productId;
+	private Integer productId;
 
-	private int quantity;
+	private Integer quantity;
 
-	//private int stockId;
+	//private Integer stockId;
 
-	private int supplierId;
+	private Integer supplierId;
 
 	private BigDecimal version;
 
 	public StockLogEntity() {
 	}
 
-	public int getRefId() {
+	public Integer getRefId() {
 		return this.refId;
 	}
 
-	public void setRefId(int refId) {
+	public void setRefId(Integer refId) {
 		this.refId = refId;
 	}
 
-	public int getCategoryId() {
+	public Integer getCategoryId() {
 		return this.categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
 
@@ -85,35 +85,35 @@ public class StockLogEntity extends DateAudit{
 		this.lastModifiedUser = lastModifiedUser;
 	}
 
-	public int getProductId() {
+	public Integer getProductId() {
 		return this.productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
-	public int getQuantity() {
+	public Integer getQuantity() {
 		return this.quantity;
 	}
 
-	public void setQuantity(int quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
 
-	/*public int getStockId() {
+	/*public Integer getStockId() {
 		return this.stockId;
 	}
 
-	public void setStockId(int stockId) {
+	public void setStockId(Integer stockId) {
 		this.stockId = stockId;
 	}*/
 
-	public int getSupplierId() {
+	public Integer getSupplierId() {
 		return this.supplierId;
 	}
 
-	public void setSupplierId(int supplierId) {
+	public void setSupplierId(Integer supplierId) {
 		this.supplierId = supplierId;
 	}
 

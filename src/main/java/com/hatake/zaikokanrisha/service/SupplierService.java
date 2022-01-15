@@ -19,7 +19,7 @@ public class SupplierService {
     }
 
 
-    public Optional<Supplier> findById(int id) {
+    public Optional<Supplier> findById(Integer id) {
         return supplierRepository.findById(id);
     }
 

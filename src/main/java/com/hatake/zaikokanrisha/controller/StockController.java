@@ -23,7 +23,7 @@ public class StockController {
     }
 
     @RequestMapping("/{id}")
-    public Optional<Stock> searchStock(@PathVariable int id) {
+    public Optional<Stock> searchStock(@PathVariable Integer id) {
         return stockService.findById(id);
     }
 

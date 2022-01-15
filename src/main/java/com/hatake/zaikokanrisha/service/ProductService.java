@@ -23,7 +23,7 @@ public class ProductService {
         productRepository.save(product);
     }
 
-    public Optional<Product> find(int id) {
+    public Optional<Product> find(Integer id) {
         return productRepository.findById(id);
     }
 

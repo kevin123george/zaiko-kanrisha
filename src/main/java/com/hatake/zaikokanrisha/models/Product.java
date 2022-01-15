@@ -23,7 +23,7 @@ public class Product extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int productId;
+	private Integer productId;
 
 	private String createdUser;
 
@@ -56,11 +56,11 @@ public class Product extends DateAudit{
 	@OneToMany(mappedBy="product")
 	private List<Stock> stocks;
 
-	public int getProductId() {
+	public Integer getProductId() {
 		return this.productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 

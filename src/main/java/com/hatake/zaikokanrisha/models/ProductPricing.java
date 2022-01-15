@@ -22,7 +22,7 @@ public class ProductPricing extends DateAudit{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int refId;
+	private Integer refId;
 
 	//bi-directional many-to-one association to Pricing
 	@ManyToOne
@@ -35,11 +35,11 @@ public class ProductPricing extends DateAudit{
 	public ProductPricing() {
 	}
 
-	public int getRefId() {
+	public Integer getRefId() {
 		return this.refId;
 	}
 
-	public void setRefId(int refId) {
+	public void setRefId(Integer refId) {
 		this.refId = refId;
 	}
 

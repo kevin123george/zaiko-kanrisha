@@ -17,7 +17,7 @@ import java.util.UUID;
 public class CategoryLogEntity  extends DateAudit{
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int categoryId;
+    private Integer categoryId;
 
     private String categoryName;
 
@@ -38,11 +38,11 @@ public class CategoryLogEntity  extends DateAudit{
         this.version = version;
     }
 
-    public int getCategoryId() {
+    public Integer getCategoryId() {
         return this.categoryId;
     }
 
-    public void setCategoryId(int categoryId) {
+    public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
     }
 

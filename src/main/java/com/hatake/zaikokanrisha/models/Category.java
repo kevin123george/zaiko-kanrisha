@@ -17,7 +17,7 @@ public class Category extends DateAudit{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int categoryId;
+    private Integer categoryId;
 
     private String categoryName;
 
@@ -35,7 +35,7 @@ public class Category extends DateAudit{
     @OneToMany(mappedBy="category")
     private List<Stock> stocks;
 
-    public int getCategoryId() {
+    public Integer getCategoryId() {
         return this.categoryId;
     }
 
@@ -71,7 +71,7 @@ public class Category extends DateAudit{
         this.version = version;
     }
 
-    public void setCategoryId(int categoryId) {
+    public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
     }
 

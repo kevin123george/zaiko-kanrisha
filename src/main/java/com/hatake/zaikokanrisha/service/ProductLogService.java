@@ -18,7 +18,7 @@ public class ProductLogService {
     }
 
 
-    public Optional<ProductLogEntity> findById(int id) {
+    public Optional<ProductLogEntity> findById(Integer id) {
         return productLogRepository.findById(id);
     }
 

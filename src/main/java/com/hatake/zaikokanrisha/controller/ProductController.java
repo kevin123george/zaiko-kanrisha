@@ -26,7 +26,7 @@ public class ProductController {
     }
 
     @RequestMapping("/{id}")
-    public Optional<Product> searchProduct(@PathVariable int id) {
+    public Optional<Product> searchProduct(@PathVariable Integer id) {
         return productService.find(id);
     }
 
