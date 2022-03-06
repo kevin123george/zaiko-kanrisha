@@ -19,34 +19,34 @@ public class CategoryController {
     @Autowired
     private CategoryLogService categoryLogService;
 
-    @RequestMapping("")
+    @GetMapping("")
     public Iterable<Category> getAllCategory() {
         return categoryService.findAll();
     }
 
-    @RequestMapping("/{id}")
+    @GetMapping("/{id}")
     public Optional<Category> searchCategory(@PathVariable Integer id) {
         return categoryService.findById(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "")
+    @PostMapping(value = "")
     public void addCategory(@RequestBody Category category) {
         categoryService.insert(category);
 //        categoryLogService.insert(TheLogConverter.categoryLogConverter(category));
     }
 
-    @RequestMapping(method = RequestMethod.PUT,value ="/{id}")
+    @PutMapping(value ="/{id}")
     public void updateCategory(@RequestBody Category category) {
         categoryService.updateCategory(category);
 //        categoryLogService.insert(TheLogConverter.categoryLogConverter(category));
     }
 
-    @RequestMapping(method = RequestMethod.DELETE,value ="/{id}")
+    @DeleteMapping(value ="/{id}")
     public void deleteCategory(@PathVariable Integer id) {
         categoryService.deleteCategory(id);
 //        categoryLogService.insert(TheLogConverter.categoryLogConverter(category));
     }
-    @RequestMapping(method = RequestMethod.DELETE,value ="/delete/all")
+    @DeleteMapping(value ="/delete/all")
     public void deleteCategory() {
         categoryService.deleteAllCategories();
 //        categoryLogService.insert(TheLogConverter.categoryLogConverter(category));

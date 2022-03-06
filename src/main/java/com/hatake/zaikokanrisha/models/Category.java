@@ -28,10 +28,12 @@ public class Category extends DateAudit{
     private BigDecimal version;
 
     //bi-directional many-to-one association to Product
+    @JsonIgnore
     @OneToMany(mappedBy="category")
     private List<Product> products;
 
     //bi-directional many-to-one association to Stock
+    @JsonIgnore
     @OneToMany(mappedBy="category")
     private List<Stock> stocks;
 
